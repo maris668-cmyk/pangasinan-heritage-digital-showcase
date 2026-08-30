@@ -12,7 +12,7 @@ const sites = [
     name: 'Hundred Islands',
     place: 'Alaminos City',
     tag: 'Nature + Heritage',
-    img: '/pangasinan-heritage-digital-showcase/images/hundred-islands.jpg',
+    img: import.meta.env.BASE_URL + 'images/hundred-islands.jpg',
     desc: 'A breathtaking group of islands and islets known for clear waters, scenic views, and memorable island adventures.'
   },
   {
@@ -20,7 +20,7 @@ const sites = [
     name: 'Bolinao Lighthouse',
     place: 'Bolinao, Pangasinan',
     tag: 'Landmark',
-    img: '/pangasinan-heritage-digital-showcase/images/bolinao-lighthouse.jpg',
+    img: import.meta.env.BASE_URL + 'images/bolinao-lighthouse.jpg',
     desc: 'A historic coastal landmark and a favorite viewpoint for visitors discovering the western side of Pangasinan.'
   },
   {
@@ -28,7 +28,7 @@ const sites = [
     name: 'Balungao Hot Spring',
     place: 'Balungao, Pangasinan',
     tag: 'Wellness + Nature',
-    img: '/pangasinan-heritage-digital-showcase/images/balungao-hot-spring.jpg',
+    img: import.meta.env.BASE_URL + 'images/balungao-hot-spring.jpg',
     desc: 'A relaxing natural destination where warm spring water and green surroundings create a calm escape.'
   }
 ]
@@ -151,7 +151,7 @@ function openStory(site) {
     <div v-if="selected" class="modalBackdrop" @click.self="selected = null">
       <article class="modal">
         <button class="close" @click="selected = null" aria-label="Close">×</button>
-        <img :src="selected.img" :alt="selected.name">
+          <img :src="import.meta.env.BASE_URL + 'images/hero-pangasinan.jpg'" alt="Scenic view representing Pangasinan">
         <div><p class="eyebrow">{{ selected.tag }}</p><h2>{{ selected.name }}</h2><p class="place">⌖ {{ selected.place }}</p><p>{{ selected.desc }}</p><button class="primary" @click="selected = null">Nice, got it!</button></div>
       </article>
     </div>
