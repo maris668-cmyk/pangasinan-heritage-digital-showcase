@@ -140,7 +140,7 @@ function openStory(site) {
             aria-label="Scenic view representing Pangasinan"
           >
             <img
-              :src="selected.img"
+              :src="selected ? selected.img : sites[0].img"
               alt="Scenic view representing Pangasinan"
             >
 
@@ -504,7 +504,7 @@ function openStory(site) {
         </button>
 
         <img
-          :src="selected.img"
+          :src="selected ? selected.img : sites[0].img"
           :alt="selected.name"
         >
 
@@ -552,6 +552,7 @@ function openStory(site) {
 
   </div>
 </template>
+
 
 
 
