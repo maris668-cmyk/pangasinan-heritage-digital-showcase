@@ -140,7 +140,7 @@ function openStory(site) {
             aria-label="Scenic view representing Pangasinan"
           >
             <img
-              :src="import.meta.env.BASE_URL + 'images/hero-pangasinan.jpg'"
+              :src="selected.img"
               alt="Scenic view representing Pangasinan"
             >
 
@@ -552,5 +552,6 @@ function openStory(site) {
 
   </div>
 </template>
+
 
 
