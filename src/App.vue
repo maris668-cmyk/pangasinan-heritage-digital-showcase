@@ -5,6 +5,7 @@ const active = ref('home')
 const query = ref('')
 const menu = ref(false)
 const selected = ref(null)
+const baseUrl = import.meta.env.BASE_URL
 
 const sites = [
   {
@@ -551,3 +552,5 @@ function openStory(site) {
 
   </div>
 </template>
+
+
